@@ -2,6 +2,8 @@ const express = require("express");
 const passport = require("passport");
 const authRoutes = require("./routes/authRoutes");
 const urlRoutes = require("./routes/urlRoutes");
+const swaggerUi = require("swagger-ui-express");
+const swaggerJsdoc = require("swagger-jsdoc");
 const analyticsRoutes = require("./routes/analyticsRoutes");
 const { authenticate } = require("./middleware/authMiddleware");
 const requestIp = require("request-ip");
@@ -26,6 +28,25 @@ app.get("/", (req, res) => {
   }
   // res.status(200).json({ message: `Hello User` });
 });
+
+const swaggerOptions = {
+  definition: {
+    openapi: "3.0.0",
+    info: {
+      title: "URL SHORTENER",
+      version: "1.0.0",
+      description: "API documentation",
+    },
+    servers: [
+      { url: "http://localhost:3000" },
+      { url: "https://dummyurlshortener.duckdns.org/" },
+    ],
+  },
+  apis: ["./swagger.yml"],
+};
+
+const swaggerDocs = swaggerJsdoc(swaggerOptions);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
