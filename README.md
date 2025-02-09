@@ -23,7 +23,7 @@ A simple URL shortening service with advanced analytics, Google authentication, 
 - **Cache**: Redis
 - **Auth**: Google OAuth 2.0
 - **Analytics**: GeoIP, User Agent parsing
-- **Deployment**: Docker, AWS/Heroku
+- **Deployment**: Docker, AWS
 
 ## Installation 💻
 
@@ -35,8 +35,8 @@ A simple URL shortening service with advanced analytics, Google authentication, 
 
 ```bash
 # Clone repository
-git clone https://github.com/abhitachi/url-shortener.git
-cd url-shortener
+git clone https://github.com/abhitachi/urlShortener.git
+cd urlShortener
 
 # Create .env file
 cp .env .env
