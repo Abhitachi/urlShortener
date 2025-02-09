@@ -9,8 +9,8 @@ client.on("connect", (err) => {
   else console.log("Connected to Redis");
 });
 
-// client.set("cache", "Hello, Redis!", redis.print); // Set a key-value pair in Redis
-// client.get("cache", redis.print); // Get the value of a key in Redis
+// client.set("cache", "Hello, Redis!", redis.print); 
+// client.get("cache", redis.print); 
 client.connect();
 
 async function findKeyByValue(targetValue) {
