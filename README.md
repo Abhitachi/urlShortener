@@ -4,7 +4,6 @@
 
 A simple URL shortening service with advanced analytics, Google authentication, and Redis caching. Dockerized for easy deployment.
 
-[![Swagger Docs](https://img.shields.io/badge/Docs-Swagger-green)](http://localhost:300/api-docs)
 
 ## Features ✨
 
