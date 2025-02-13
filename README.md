@@ -40,3 +40,6 @@ cd urlShortener
 
 # Create .env file
 cp .env .env
+
+# docker hub repository
+https://hub.docker.com/r/abhitachi/urlshortener
